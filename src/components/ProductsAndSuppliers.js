@@ -51,13 +51,13 @@ export default class ProductsAndSuppliers extends Component {
         <Selector>
           <ProductDisplay
             name="Products"
-            products={this.state.products}
+            // products={this.state.products}
             saveCallback={(p) => this.saveData("products", p)}
             deleteCallback={(p) => this.deleteData("products", p)}
           />
           <SupplierDisplay
             name="Suppliers"
-            suppliers={this.state.suppliers}
+            // suppliers={this.state.suppliers}
             saveCallback={(s) => this.saveData("suppliers", s)}
             deleteCallback={(s) => this.deleteData("suppliers", s)}
           />
