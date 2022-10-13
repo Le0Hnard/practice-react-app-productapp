@@ -23,6 +23,6 @@ export default function(storeData, action) {
         ),
       };
     default:
-      return storeData || initialData;
+      return storeData || initialData.modelData;
   }
 }
