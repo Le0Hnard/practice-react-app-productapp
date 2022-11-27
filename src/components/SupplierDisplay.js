@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { startCreatingSupplier } from "../store/stateActions";
 import { SUPPLIERS } from "../store/dataTypes";
 import { EditorConnector } from "../store/EditorConnector";
-import { TableConnector } from "../store/tableConnector";
+import { TableConnector } from "../store/TableConnector";
 
 const ConnectedEditor = EditorConnector(SUPPLIERS, SupplierEditor);
 const ConnectedTable = TableConnector(SUPPLIERS, SupplierTable);

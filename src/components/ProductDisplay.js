@@ -4,7 +4,7 @@ import { ProductEditor } from "./ProductEditor";
 import { connect } from "react-redux";
 import { EditorConnector } from "../store/EditorConnector";
 import { PRODUCTS } from "../store/dataTypes";
-import { TableConnector } from "../store/tableConnector";
+import { TableConnector } from "../store/TableConnector";
 import { startCreatingProduct } from "../store/stateActions";
 
 const ConnectedEditor = EditorConnector(PRODUCTS, ProductEditor);
