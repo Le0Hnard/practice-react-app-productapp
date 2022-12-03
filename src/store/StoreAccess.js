@@ -28,6 +28,10 @@ export class StoreAccess extends Component {
       .reduce((result, [k, v]) => ({ ...result, [k]: v }), {});
   }
 
+  dispatchAction = () => {
+    this.props.store.dispatch(startCreatingProduct());
+  };
+
   handleDataStoreChange() {
     let newData = this.selectData();
     Object.keys(this.selectors)
@@ -37,11 +41,18 @@ export class StoreAccess extends Component {
 
   render() {
     return (
-      <div className="bg-info">
-        <pre className="text-white">
-          {JSON.stringify(this.selectData(), null, 2)}
-        </pre>
-      </div>
+      <>
+        <div className="text-center">
+          <button className="btn btn-primary m-1" onClick={this.dispatchAction}>
+            Dispatch Action
+          </button>
+        </div>
+        <div className="bg-info">
+          <pre className="text-white">
+            {JSON.stringify(this.selectData(), null, 2)}
+          </pre>
+        </div>
+      </>
     );
   }
 }
